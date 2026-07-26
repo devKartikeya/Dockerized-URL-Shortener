@@ -1,0 +1,12 @@
+{
+  "name": "dockerized-url-shortener",
+  "version": "1.0.0",
+  "description": "Dockerized url shortener is a utility to shorten your urls and ease your life.",
+  "license": "ISC",
+  "author": "KM",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
