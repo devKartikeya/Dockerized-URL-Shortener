@@ -46,4 +46,29 @@ async function shortenURL(request, response) {
     });
 }
 
-module.exports = { shortenURL };
+async function generateURL(request, response) {
+    const { shortCode } = request.params;
+
+    const url = await Url.findOne({ shortCode });
+
+    if (!url) {
+        return response.status(404).json({
+            success: false,
+            message: "Short URL not found"
+        });
+    }
+
+    await Url.updateOne(
+        { shortCode },
+        {
+            $inc: {
+                clicks: 1
+            }
+        }
+    );
+
+    console.log(url);
+    return response.redirect(url.originalUrl);
+}
+
+module.exports = { shortenURL, generateURL };
