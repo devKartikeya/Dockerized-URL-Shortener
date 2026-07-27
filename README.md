@@ -57,7 +57,7 @@ This project was built to learn Docker from the ground up while implementing a r
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/devKartikeya/Dockerized-URL-Shortener.git
 cd dockerized-url-shortener
 ```
 
