@@ -1,19 +1,13 @@
-const express = require("express");
-const connectDB = require("./config/db");
-const urlRouter = require("./routes/urlRoutes");
+const app = require("express")();
 
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use("/url", urlRouter);
+app.use(require("express").json());
+app.use(require("express").urlencoded({ extended: true }));
 
-/* Connecting with Mongo Container */
-connectDB();
+/* Mounting Router */
+app.use("/url", require("./routes/urlRoutes"));
 
-/* Index Route */
-app.get("/", (req, res) => {
-    res.send("Docker URL Shortener API");
-});
+/* Connection with MongoDB */
+require("./config/db").connectDB();
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");

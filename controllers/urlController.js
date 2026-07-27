@@ -3,7 +3,6 @@ const generateShortCode = require("../utils/generateShortCode");
 
 /* Controller to short the URL */
 async function shortenURL(request, response) {
-    console.log(request.body)
     const { url } = request.body;
 
     // Check if URL is provided
@@ -24,6 +23,7 @@ async function shortenURL(request, response) {
         });
     }
 
+    //Check if url already exists
     const existingURL = await Url.findOne({
         originalUrl: url
     });
@@ -35,6 +35,7 @@ async function shortenURL(request, response) {
         });
     }
 
+    //Generate unique short code
     const shortCode = generateShortCode();
     const newURL = await Url.create({
         originalUrl: url,
@@ -50,7 +51,6 @@ async function shortenURL(request, response) {
 /* Controller to redirect to correct URL */
 async function generateURL(request, response) {
     const { shortCode } = request.params;
-
     const url = await Url.findOne({ shortCode });
 
     if (!url) {
@@ -60,6 +60,7 @@ async function generateURL(request, response) {
         });
     }
 
+    //Update clicks
     await Url.updateOne(
         { shortCode },
         {
@@ -69,7 +70,6 @@ async function generateURL(request, response) {
         }
     );
 
-    console.log(url);
     return response.redirect(url.originalUrl);
 }
 
