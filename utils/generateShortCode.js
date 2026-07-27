@@ -1,6 +1,7 @@
 const CHARACTERS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+/* Generating unique short code */
 function generateShortCode(length = 6) {
   let shortCode = "";
 

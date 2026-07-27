@@ -1,6 +1,7 @@
 const Url = require("../models/Url");
 const generateShortCode = require("../utils/generateShortCode");
 
+/* Controller to short the URL */
 async function shortenURL(request, response) {
     console.log(request.body)
     const { url } = request.body;
@@ -46,6 +47,7 @@ async function shortenURL(request, response) {
     });
 }
 
+/* Controller to redirect to correct URL */
 async function generateURL(request, response) {
     const { shortCode } = request.params;
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const MONGO_URI = 'mongodb://mongo-db:27017/urlshortener';
+    const MONGO_URI = 'mongodb://mongo:27017/urlshortener'; /* Connecting to same bridge network mongo container with name 'mongo-db' */
     await mongoose.connect(MONGO_URI);
     console.log('MongoDB connected');
   } catch (err) {

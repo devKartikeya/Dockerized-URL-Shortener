@@ -7,8 +7,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/url", urlRouter);
 
+/* Connecting with Mongo Container */
 connectDB();
 
+/* Index Route */
 app.get("/", (req, res) => {
     res.send("Docker URL Shortener API");
 });
