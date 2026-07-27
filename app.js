@@ -1,7 +1,11 @@
 const express = require("express");
-const connectDB = require("./db");
+const connectDB = require("./config/db");
+const urlRouter = require("./routes/urlRoutes");
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/url", urlRouter);
 
 connectDB();
 
