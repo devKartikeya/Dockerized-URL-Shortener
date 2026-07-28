@@ -2,6 +2,8 @@
 
 A production-ready URL Shortener API built with **Node.js**, **Express**, **MongoDB**, **Docker**, and **Docker Compose**. The project demonstrates how to containerize a full-stack backend application, connect multiple containers through Docker networking, persist data using MongoDB, and simplify deployment with Docker Compose.
 
+The project includes a complete, reliable and developer-friendly documentation written by myself based on my experirences with Docker which can be helpful to crack interviews.
+
 This project was built to learn Docker from the ground up while implementing a real-world backend application rather than following simple "Hello World" examples.
 
 ---
