@@ -142,11 +142,31 @@ Automatically redirects the user to the original URL.
 
 ---
 
+## 📖 Documentation
+
+| Chapter | Topic |
+|---------|-------|
+| 01 | Docker Introduction |
+| 02 | Docker Architecture |
+| 03 | Images and Containers |
+| 04 | Dockerfile |
+| 05 | Image Layering & Container Filesystem |
+| 06 | Port Publishing & NAT |
+| 07 | Docker Networking |
+| 08 | Volumes & Bind Mounts |
+| 09 | Docker Compose |
+| 10 | Docker Best Practices |
+| 11 | Docker CLI Cheat Sheet |
+| 12 | Frequently Asked Interview Questions |
+
+---
+
 ## 📚 What I Learned
 
 While building this project I gained hands-on experience with
 
 - Writing Dockerfiles
+- Creating Documentations
 - Building custom Docker images
 - Container lifecycle
 - Docker networking
@@ -177,6 +197,8 @@ While building this project I gained hands-on experience with
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome.
+
+You are free to add suggestions to the Documentation.
 
 Feel free to fork the repository and submit a pull request.
 
