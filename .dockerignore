@@ -1,0 +1,41 @@
+# Dependencies (installed inside container)
+node_modules/
+
+# Build output (generated inside container)
+dist/
+build/
+
+# Version control
+.git/
+.gitignore
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+
+# Test and coverage
+**/*.test.js
+**/*.spec.js
+**/__tests__/
+coverage/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (prevent recursive builds)
+Dockerfile*
+docker-compose*
+.docker/   
