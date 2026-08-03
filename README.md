@@ -1,10 +1,10 @@
-# 🔗 Dockerized URL Shortener
+# 🔗 Dockerized URL Shortener with CI/CD
 
-A production-ready URL Shortener API built with **Node.js**, **Express**, **MongoDB**, **Docker**, and **Docker Compose**. The project demonstrates how to containerize a full-stack backend application, connect multiple containers through Docker networking, persist data using MongoDB, and simplify deployment with Docker Compose.
+A production-ready URL Shortener API built with **Node.js**, **Express**, **MongoDB**, **Docker**, and **Docker Compose**. The project demonstrates how to containerize a full-stack backend application, connect multiple containers through Docker networking, persist data using MongoDB, and simplify deployment with Docker Compose and securely build a robust an automated pipeline that automates the process of continuous merge and deployment of code.
 
 The project includes a complete, reliable and developer-friendly documentation written by myself based on my experirences with Docker which can be helpful to crack interviews.
 
-This project was built to learn Docker from the ground up while implementing a real-world backend application rather than following simple "Hello World" examples.
+This project was built to learn Docker from the ground up while implementing a real-world backend application rather than following simple "Hello World" examples but end up in building a robust CI/CD Pipeline that automates deployment.
 
 ---
 
@@ -22,6 +22,7 @@ This project was built to learn Docker from the ground up while implementing a r
 - Docker Compose support
 - Container networking
 - Layer-cached image builds
+- Automatic integration & deployment with GitHub Action CI/CD 
 
 ---
 
@@ -40,14 +41,18 @@ This project was built to learn Docker from the ground up while implementing a r
 
 ```
 .
+├── .github/workflows/ci.yml
 ├── controllers/
 ├── models/
 ├── routes/
 ├── utils/
+├── docs/
+├── config/
 ├── app.js
-├── db.js
 ├── Dockerfile
 ├── docker-compose.yml
+├── .dockerignore
+├── .gitignore
 ├── package.json
 └── README.md
 ```
@@ -59,7 +64,7 @@ This project was built to learn Docker from the ground up while implementing a r
 Clone the repository
 
 ```bash
-git clone https://github.com/devKartikeya/Dockerized-URL-Shortener.git
+git clone https://github.com/devKartikeya/Dockerized-URL-Shortener-CI-CD.git
 cd dockerized-url-shortener
 ```
 
@@ -178,6 +183,7 @@ While building this project I gained hands-on experience with
 - Image layers and caching
 - OverlayFS concepts
 - Container isolation
+- Building robust CI/CD Pipelines
 - Practical backend deployment workflow
 
 ---
@@ -191,7 +197,6 @@ While building this project I gained hands-on experience with
 - URL expiration
 - Redis caching
 - Nginx reverse proxy
-- CI/CD pipeline
 - Cloud deployment
 
 ---
