@@ -1,6 +1,6 @@
 services:
   app: 
-    build: .
+    image: devkartikeya/url-shortener:v1
     ports:
       - "3000:3000"
     depends_on:
